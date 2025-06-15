@@ -25,12 +25,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Sakura2598/go-ribble"
+	"github.com/Sakura2598/go-ribble/accounts"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/core/types"
+	"github.com/Sakura2598/go-ribble/crypto"
+	"github.com/Sakura2598/go-ribble/log"
 	"github.com/karalabe/hid"
 )
 

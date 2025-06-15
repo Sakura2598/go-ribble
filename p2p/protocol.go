@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
+	"github.com/Sakura2598/go-ribble/p2p/enode"
+	"github.com/Sakura2598/go-ribble/p2p/enr"
 )
 
 // Protocol represents a P2P subprotocol implementation.

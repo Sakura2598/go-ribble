@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/tracers/logger"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/core/rawdb"
+	"github.com/Sakura2598/go-ribble/core/state"
+	"github.com/Sakura2598/go-ribble/core/vm"
+	"github.com/Sakura2598/go-ribble/eth/tracers/logger"
+	"github.com/Sakura2598/go-ribble/tests"
 	"github.com/urfave/cli/v2"
 )
 

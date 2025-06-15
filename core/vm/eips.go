@@ -21,9 +21,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/core/tracing"
+	"github.com/Sakura2598/go-ribble/params"
 	"github.com/holiman/uint256"
 )
 

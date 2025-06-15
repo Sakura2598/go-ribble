@@ -20,13 +20,13 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/core"
+	"github.com/Sakura2598/go-ribble/core/rawdb"
+	"github.com/Sakura2598/go-ribble/core/types"
+	"github.com/Sakura2598/go-ribble/core/vm"
+	"github.com/Sakura2598/go-ribble/crypto"
+	"github.com/Sakura2598/go-ribble/params"
 )
 
 // This test case is a repro of an annoying bug that took us forever to catch.

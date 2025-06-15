@@ -22,10 +22,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/crypto"
+	"github.com/Sakura2598/go-ribble/params"
+	"github.com/Sakura2598/go-ribble/rlp"
 )
 
 func TestEIP155Signing(t *testing.T) {

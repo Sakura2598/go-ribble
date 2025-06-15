@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Sakura2598/go-ribble/common"
 )
 
 // Legacy sync progress definitions

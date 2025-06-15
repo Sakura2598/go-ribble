@@ -24,13 +24,13 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/tests"
+	"github.com/Sakura2598/go-ribble/common"
+	"github.com/Sakura2598/go-ribble/common/hexutil"
+	"github.com/Sakura2598/go-ribble/core"
+	"github.com/Sakura2598/go-ribble/core/types"
+	"github.com/Sakura2598/go-ribble/params"
+	"github.com/Sakura2598/go-ribble/rlp"
+	"github.com/Sakura2598/go-ribble/tests"
 	"github.com/urfave/cli/v2"
 )
 

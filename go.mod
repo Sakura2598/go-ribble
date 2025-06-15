@@ -1,4 +1,4 @@
-module github.com/ethereum/go-ethereum
+module github.com/Sakura2598/go-ribble
 
 go 1.22
 

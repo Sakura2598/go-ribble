@@ -19,7 +19,7 @@ package snapshot
 import (
 	"bytes"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Sakura2598/go-ribble/common"
 )
 
 // binaryIterator is a simplistic iterator to step over the accounts or storage

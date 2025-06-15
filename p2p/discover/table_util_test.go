@@ -29,10 +29,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/discover/v4wire"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
+	"github.com/Sakura2598/go-ribble/crypto"
+	"github.com/Sakura2598/go-ribble/p2p/discover/v4wire"
+	"github.com/Sakura2598/go-ribble/p2p/enode"
+	"github.com/Sakura2598/go-ribble/p2p/enr"
 )
 
 var nullNode *enode.Node

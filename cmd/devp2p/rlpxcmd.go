@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/ethtest"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Sakura2598/go-ribble/cmd/devp2p/internal/ethtest"
+	"github.com/Sakura2598/go-ribble/crypto"
+	"github.com/Sakura2598/go-ribble/p2p"
+	"github.com/Sakura2598/go-ribble/p2p/enode"
+	"github.com/Sakura2598/go-ribble/p2p/rlpx"
+	"github.com/Sakura2598/go-ribble/rlp"
 	"github.com/urfave/cli/v2"
 )
 

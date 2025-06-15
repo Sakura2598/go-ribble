@@ -24,7 +24,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Sakura2598/go-ribble/log"
 )
 
 const MetadataApi = "rpc"

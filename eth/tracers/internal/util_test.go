@@ -18,7 +18,7 @@ package internal
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/Sakura2598/go-ribble/core/vm"
 )
 
 func TestMemCopying(t *testing.T) {

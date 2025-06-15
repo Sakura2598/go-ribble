@@ -25,7 +25,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Sakura2598/go-ribble/common"
 	"github.com/golang-jwt/jwt/v4"
 )
 

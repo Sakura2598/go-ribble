@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/Sakura2598/go-ribble/node"
 )
 
 // SampleLifecycle is a trivial network service that can be attached to a node for

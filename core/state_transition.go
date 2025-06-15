@@ -21,13 +21,13 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	cmath "github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Sakura2598/go-ribble/common"
+	cmath "github.com/Sakura2598/go-ribble/common/math"
+	"github.com/Sakura2598/go-ribble/core/tracing"
+	"github.com/Sakura2598/go-ribble/core/types"
+	"github.com/Sakura2598/go-ribble/core/vm"
+	"github.com/Sakura2598/go-ribble/crypto/kzg4844"
+	"github.com/Sakura2598/go-ribble/params"
 	"github.com/holiman/uint256"
 )
 

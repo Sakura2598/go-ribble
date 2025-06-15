@@ -19,7 +19,7 @@ package misc
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Sakura2598/go-ribble/params"
 )
 
 // VerifyGaslimit verifies the header gas limit according increase/decrease

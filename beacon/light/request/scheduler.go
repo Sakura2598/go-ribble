@@ -19,7 +19,7 @@ package request
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Sakura2598/go-ribble/log"
 )
 
 // Module represents a mechanism which is typically responsible for downloading

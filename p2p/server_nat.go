@@ -20,10 +20,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/p2p/nat"
+	"github.com/Sakura2598/go-ribble/common/mclock"
+	"github.com/Sakura2598/go-ribble/log"
+	"github.com/Sakura2598/go-ribble/p2p/enr"
+	"github.com/Sakura2598/go-ribble/p2p/nat"
 )
 
 const (

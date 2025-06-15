@@ -16,7 +16,7 @@
 
 package database
 
-import "github.com/ethereum/go-ethereum/common"
+import "github.com/Sakura2598/go-ribble/common"
 
 // Reader wraps the Node method of a backing trie reader.
 type Reader interface {

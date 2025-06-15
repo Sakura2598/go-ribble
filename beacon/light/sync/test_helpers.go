@@ -20,9 +20,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/beacon/light"
-	"github.com/ethereum/go-ethereum/beacon/light/request"
-	"github.com/ethereum/go-ethereum/beacon/types"
+	"github.com/Sakura2598/go-ribble/beacon/light"
+	"github.com/Sakura2598/go-ribble/beacon/light/request"
+	"github.com/Sakura2598/go-ribble/beacon/types"
 )
 
 type requestWithID struct {

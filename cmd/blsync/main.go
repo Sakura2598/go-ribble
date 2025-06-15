@@ -21,13 +21,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/beacon/blsync"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Sakura2598/go-ribble/beacon/blsync"
+	"github.com/Sakura2598/go-ribble/cmd/utils"
+	"github.com/Sakura2598/go-ribble/internal/debug"
+	"github.com/Sakura2598/go-ribble/internal/flags"
+	"github.com/Sakura2598/go-ribble/log"
+	"github.com/Sakura2598/go-ribble/node"
+	"github.com/Sakura2598/go-ribble/rpc"
 	"github.com/urfave/cli/v2"
 )
 

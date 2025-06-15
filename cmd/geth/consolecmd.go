@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/internal/flags"
+	"github.com/Sakura2598/go-ribble/cmd/utils"
+	"github.com/Sakura2598/go-ribble/console"
+	"github.com/Sakura2598/go-ribble/internal/flags"
 	"github.com/urfave/cli/v2"
 )
 
