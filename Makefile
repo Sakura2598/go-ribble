@@ -1,12 +1,8 @@
-# This Makefile is meant to be used by people that do not usually work
-# with Go source code. If you know what GOPATH is then you probably
-# don't need to bother with make.
-
-.PHONY: geth all test lint fmt clean devtools help
+.PHONY: geth all test lint fmt clean devtools help cross-all
 
 GOBIN = ./build/bin
-GO ?= latest
 GORUN = go run
+VERSION ?= v1.0.0
 
 #? geth: Build geth.
 geth:
@@ -33,10 +29,7 @@ fmt:
 #? clean: Clean go cache, built executables, and the auto generated folder.
 clean:
 	go clean -cache
-	rm -fr build/_workspace/pkg/ $(GOBIN)/*
-
-# The devtools target installs tools required for 'go generate'.
-# You need to put $GOBIN (or $GOPATH/bin) in your PATH to use 'go generate'.
+	rm -fr build/_workspace/pkg/ $(GOBIN)/* builds/$(VERSION)
 
 #? devtools: Install recommended developer tools.
 devtools:
@@ -55,3 +48,28 @@ help: Makefile
 	@echo ''
 	@echo 'Targets:'
 	@sed -n 's/^#?//p' $< | column -t -s ':' |  sort | sed -e 's/^/ /'
+
+#? cross-all: Cross compile geth for linux, windows, darwin (amd64).
+#? cross-all: Cross build all tools for multiple OS/ARCH.
+cross-all:
+	@echo "🔧 Building all tools for multiple platforms"
+	@VERSION=$(VERSION); \
+	COMMIT=$$(git rev-parse --short HEAD); \
+	DATE=$$(date -u +%Y%m%d); \
+	TARGETS="linux/amd64 windows/amd64 darwin/amd64"; \
+	TOOLS="geth abigen bootnode clef evm puppeth rlpdump"; \
+	for target in $$TARGETS; do \
+		OS=$${target%%/*}; ARCH=$${target##*/}; \
+		for tool in $$TOOLS; do \
+			EXT=""; [ "$$OS" = "windows" ] && EXT=".exe"; \
+			OUTDIR=outs/$(VERSION)/$$OS-$$ARCH; \
+			mkdir -p $$OUTDIR; \
+			echo "👉 Building $$tool for $$OS/$$ARCH → $$OUTDIR/$$tool$$EXT"; \
+			GOOS=$$OS GOARCH=$$ARCH CGO_ENABLED=0 go build \
+				-o $$OUTDIR/$$tool$$EXT \
+				-ldflags "-buildid=none -X github.com/Sakura2598/go-ribble/internal/version.gitCommit=$$COMMIT -X github.com/Sakura2598/go-ribble/internal/version.gitDate=$$DATE" \
+				-tags urfave_cli_no_docs,ckzg \
+				-trimpath ./cmd/$$tool || echo "⚠️ Failed to build $$tool for $$OS/$$ARCH"; \
+		done; \
+	done
+	@echo "✅ Cross build completed → builds/$(VERSION)/*"
