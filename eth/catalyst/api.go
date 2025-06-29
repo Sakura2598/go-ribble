@@ -398,6 +398,29 @@ func (api *ConsensusAPI) forkchoiceUpdated(update engine.ForkchoiceStateV1, payl
 		// If the head block is already in our canonical chain, the beacon client is
 		// probably resyncing. Ignore the update.
 		log.Info("Ignoring beacon update to old head", "number", block.NumberU64(), "hash", update.HeadBlockHash, "age", common.PrettyAge(time.Unix(int64(block.Time()), 0)), "have", api.eth.BlockChain().CurrentBlock().Number)
+		// if payloadAttributes != nil {
+		// 	args := &miner.BuildPayloadArgs{
+		// 		Parent:       update.HeadBlockHash,
+		// 		Timestamp:    payloadAttributes.Timestamp,
+		// 		FeeRecipient: payloadAttributes.SuggestedFeeRecipient,
+		// 		Random:       payloadAttributes.Random,
+		// 		Withdrawals:  payloadAttributes.Withdrawals,
+		// 		BeaconRoot:   payloadAttributes.BeaconRoot,
+		// 		Version:      payloadVersion,
+		// 	}
+		// 	id := args.Id()
+		// 	if api.localBlocks.has(id) {
+		// 		return valid(&id), nil
+		// 	}
+		// 	payload, err := api.eth.Miner().BuildPayload(args, payloadWitness)
+		// 	if err != nil {
+		// 		log.Error("Failed to build payload for old head", "err", err)
+		// 		return valid(nil), engine.InvalidPayloadAttributes.With(err)
+		// 	}
+		// 	api.localBlocks.put(id, payload)
+		// 	return valid(&id), nil
+		// }
+		// Fallback: valid but no payloadID
 		return valid(nil), nil
 	}
 	api.eth.SetSynced()

@@ -2,7 +2,7 @@
 
 GOBIN = ./build/bin
 GORUN = go run
-VERSION ?= v1.0.0
+VERSION ?= v1.1.0
 
 #? geth: Build geth.
 geth:
@@ -56,7 +56,7 @@ cross-all:
 	@VERSION=$(VERSION); \
 	COMMIT=$$(git rev-parse --short HEAD); \
 	DATE=$$(date -u +%Y%m%d); \
-	TARGETS="linux/amd64 windows/amd64 darwin/amd64"; \
+	TARGETS="linux/amd64 linux/arm64 windows/amd64 darwin/amd64"; \
 	TOOLS="geth abigen bootnode clef evm puppeth rlpdump"; \
 	for target in $$TARGETS; do \
 		OS=$${target%%/*}; ARCH=$${target##*/}; \
