@@ -9,7 +9,10 @@ fi
 if [ -n "$GENESIS_FILE" ] && [ -n "$DATADIR" ]; then
   if [ ! -f "$DATADIR/geth/chaindata/CURRENT" ]; then
     echo "🟡 Initializing geth with genesis file: $GENESIS_FILE"
-    geth --datadir "$DATADIR" init "$GENESIS_FILE"
+    if ["$SCHEMA"] then
+      geth --datadir "$DATADIR" init --state.scheme="$SCHEMA" "$GENESIS_FILE"
+    else
+      geth --datadir "$DATADIR" init "$GENESIS_FILE"
   else
     echo "✅ Genesis already initialized in $DATADIR"
   fi
