@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e  # Exit on error
+
 # Auto-init Geth with genesis file if not yet initialized
 if [ "$DISABLE_GENESIS_INIT" == "true" ]; then
   echo "⏭️ Skipping genesis initialization (DISABLE_GENESIS_INIT=true)"
@@ -9,10 +10,11 @@ fi
 if [ -n "$GENESIS_FILE" ] && [ -n "$DATADIR" ]; then
   if [ ! -f "$DATADIR/geth/chaindata/CURRENT" ]; then
     echo "🟡 Initializing geth with genesis file: $GENESIS_FILE"
-    if ["$SCHEMA"] then
+    if [ -n "$SCHEMA" ]; then
       geth --datadir "$DATADIR" init --state.scheme="$SCHEMA" "$GENESIS_FILE"
     else
       geth --datadir "$DATADIR" init "$GENESIS_FILE"
+    fi  
   else
     echo "✅ Genesis already initialized in $DATADIR"
   fi
